@@ -1,0 +1,51 @@
+        <?php
+            switch($nav){
+                case 'lesson':
+                    foreach($lesson_lists as $v){?>
+                    <div class="panel on">
+                        <div class="lesson-list">
+                            <a href="/lesson-detail-ztk/<?= $v['sp_id'];?>">
+                                <li class="item">
+                                    <div class="pic">
+                                        <img src="<?= $v['sp_pic_url'];?>">
+                                    </div>
+                                    <div class="info">
+                                        <h4><?= $v['sp_name'];?></h4>
+                                        <p style="margin-top:.2rem;">
+                                            <span>共&nbsp;<span class="green"><?= $v['class_hour'];?></span>&nbsp;讲</span>
+                                            <span style="margin-left:.35rem;">已&nbsp;<span class="green"><?= $v['sp_buy_num'];?></span>&nbsp;人报名</span>
+                                        </p>
+                                        <p class="green" style="margin-top:.3rem;">
+                                            <span>￥</span><span class="price"><?= $v['sp_off_price'];?></span>
+                                        </p>
+                                    </div>
+                                </li>
+                            </a>
+                        </div>
+                    </div>
+                <?php }
+                    break;
+                case 'article':
+                    foreach($article_lists as $v){?>
+                    <div class="panel on">
+                        <div class="xx-list">
+                            <div class="item">
+                                <a href="/xqxq-article/<?= $v['article_id'];?>"><div class="title"><?= $v['article_title'];?></div></a>
+                                <div class="info1">
+                                    <span class="ite">
+                                        <i class="ico ico-time"></i>&nbsp;<span><?= date('m-d', $v['add_time']);?></span>&nbsp;&nbsp;<span><?= date('H:i', $v['add_time']);?></span>
+                                    </span>
+                                    <span class="ite">
+                                        <i class="ico ico-eye"></i>&nbsp;<span><?= $v['view_count'];?></span>
+                                    </span>
+                                    <span class="ite">
+                                        <i class="ico ico-talk"></i>&nbsp;<span><?= $v['comment_count'];?></span>
+                                    </span>
+                                </div>
+                                <?php if($v['article_label'][0] != ''){?>
+                                <ul class="info2">
+                                    <?php foreach($v['article_label'] as $label){?>
+                                    <li><?= $label?></li>
+                                    <?php }?>
+                                </ul>
+                                <?php }?>
