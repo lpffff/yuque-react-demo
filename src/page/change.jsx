@@ -4,9 +4,12 @@ const MyInput = ({ value = "", onChange }) => (
 );
 //如果不加value，非受控组件
 class Change extends React.Component {
-  state = {
-    value: ""
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: "123",
+    };
+  }
   onTextChange = event => {
     console.log(event.target.value);
     this.setState({
