@@ -2,11 +2,11 @@ export default {
     singular: true,
     routes: [{
         path: '/',
-        component: '/',
+        component: '../layout',
         routes: [
             {
-                path: 'ap',
-                component: 'Ap'
+                path: 'index',
+                component: './index'
             }
             , {
                 path: 'card',

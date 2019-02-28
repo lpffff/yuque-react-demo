@@ -1,7 +1,15 @@
-import {Card} from "antd";
+import { Card } from 'antd';
 
-export default () => <div>
-    <Card>
-        <Card.Meta description="123"/>
-    </Card>
-</div>
+export default () => {
+  const style= {
+    width: '400px',
+  }
+      return (
+        <Card className='card'>
+          <div className='card-content'>
+            123
+          </div>
+        </Card>
+      )
+  }
+  

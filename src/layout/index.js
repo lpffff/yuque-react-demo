@@ -6,7 +6,7 @@ const {Header, Footer, Sider, Content} = Layout;
 // 引入子菜单组件
 const SubMenu = Menu.SubMenu;
 
-class BasicLayout extends React.Component {
+export default class BasicLayout extends React.Component {
     render() {
         return (
             <Layout>
@@ -42,5 +42,3 @@ class BasicLayout extends React.Component {
         )
     }
 }
-
-export default BasicLayout;
