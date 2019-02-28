@@ -7,7 +7,7 @@ export default () => {
       return (
         <Card className='card'>
           <div className='card-content'>
-            123
+            1234
           </div>
         </Card>
       )
