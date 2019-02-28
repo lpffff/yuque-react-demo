@@ -2,3 +2,6 @@ node_modules
 dist
 .umi
 .history
+.idea/misc.xml
+*.xml
+.idea/yuque-demo.iml
